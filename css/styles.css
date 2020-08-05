@@ -11,8 +11,7 @@ html{
 body{
     background: rgb(78,173,143);
     background: linear-gradient(102deg, rgba(78,173,143,1) 0%, rgba(72,68,152,1) 89%, rgba(81,46,148,1) 100%);
-    width: 100vw;
-    
+    width: 100%;
 }
 
 
@@ -73,12 +72,12 @@ margin-left: 35px;
 button{
     outline: none;
     border: 1px solid rgba(72,68,152,1);
-    
     background-color: #e0dedf;
     border-radius: 10px 10px;
 }
 
-#start{
+#start, #stop{
+
     color: #ffffff;
     border: 1px solid rgba(72,68,152,1);
     background-color: rgba(72,68,152,1);
@@ -95,9 +94,11 @@ button{
     color: rgba(72,68,152,1);
 }
 
+
 #start, #reset:hover, #lap:hover{
     background-color: rgba(81,46,148,1);
     color: #ffffff;
+
 
 }
 
@@ -110,7 +111,9 @@ button{
         font-size: 2em;
     }
 
-    #start {
+
+    #start, #stop {
+
         padding: 1em 5em;
     }
 
@@ -126,14 +129,12 @@ button{
             border-radius: 50%;
             justify-content: space-between;
         }
-
-        #start {
+        #start, #stop {
             padding: 1em 3em;
         }
-    
+
         #reset, #lap {
             padding: 1em 1em;
-            
         }
     }
 
@@ -143,5 +144,10 @@ button{
             
         }
     }
+        #reset, #lap, #start, #stop {
+            padding: 1em 1em;
 
-    
+        }
+    }
+}
+

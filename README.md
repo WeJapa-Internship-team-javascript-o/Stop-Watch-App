@@ -14,9 +14,13 @@ Build a stop watch app including a lap function
 
 # Steps
 1.User should be able to use Start function/button to start the timer
+
 2.While the timer is running, the Lap function button should be used to show elapsed time to that point 
+
 3.User should be able to Stop the running time 
+
 4.User can choose to Continue from where it stops or Reset the timer to start
+
 5.User can Share the elapsed time stop with friends on different social media platforms
 
 
