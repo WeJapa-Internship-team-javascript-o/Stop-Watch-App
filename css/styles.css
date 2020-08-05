@@ -1,0 +1,126 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background: rgb(78,173,143);
+    background: linear-gradient(102deg, rgba(78,173,143,1) 0%, rgba(72,68,152,1) 89%, rgba(81,46,148,1) 100%);
+    width: 100vw;
+
+}
+
+
+#card{
+    background-color: #e0dedf;
+    border: 10px solid #e0dedf;
+    width: 70%;
+    height: 80vh;
+    margin: 3em auto;
+    box-shadow: 10px 10px 20px 2px rgba(0,0,1,);
+}
+
+.circle {
+        background-color:#e0dedf;
+        border:2px solid rgba(78,173,143,1);    
+        height: 13.5em;
+        border-radius:50%;
+        width: 13.5em;
+        margin: 0.5em auto;
+
+    }
+
+#timer-display{
+    font-family: sans-serif;
+    font-size: 2.1em;
+    margin: 2.8em 1.2em;
+    font-weight: 400;
+}
+
+
+.button{
+    position: relative;
+    top: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+button{
+    outline: none;
+    border: 1px solid rgba(72,68,152,1);
+
+    background-color: #e0dedf;
+    border-radius: 10px 10px;
+}
+
+#start{
+    color: #ffffff;
+    border: 1px solid rgba(72,68,152,1);
+    background-color: rgba(72,68,152,1);
+    padding: 1em 10em;
+    border-radius: 10px 10px;
+}
+
+#reset, #lap {
+    padding: 1em 5em;
+}
+
+#reset, #lap {
+    visibility: hidden;
+    color: rgba(72,68,152,1);
+}
+
+#start:hover{
+    background-color: rgba(81,46,148,1);
+
+
+}
+
+@media only screen and (max-width: 1100px){
+    html{
+        font-size: 11px;
+    }
+
+    #timer-display{
+        font-size: 2em;
+    }
+
+    #start {
+        padding: 1em 5em;
+    }
+
+    #reset, #lap {
+        padding: 1em 3em;
+        margin: 0 0.5em;
+    }
+
+    @media only screen and (max-width: 800px){
+        button{
+            border-radius: 50%;
+            justify-content: space-between;
+        }
+
+        #start {
+            padding: 1em 3em;
+        }
+
+        #reset, #lap {
+            padding: 1em 1em;
+
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        #reset, #lap, #start {
+            padding: 1em 1em;
+
+        }
+    }
+
