@@ -95,9 +95,9 @@ button{
     color: rgba(72,68,152,1);
 }
 
-#start, #reset, #lap:hover{
+#start, #reset:hover, #lap:hover{
     background-color: rgba(81,46,148,1);
-    
+    color: #ffffff;
 
 }
 
