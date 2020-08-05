@@ -1,27 +1,29 @@
 
-*{
+* {
     box-sizing: border-box;
 }
 
 
-html{
+html {
     font-size: 16px;
 }
 
-body{
+body {
     background: rgb(78,173,143);
     background: linear-gradient(102deg, rgba(78,173,143,1) 0%, rgba(72,68,152,1) 89%, rgba(81,46,148,1) 100%);
-    width: 100%;
 }
 
 
-#card{
+#card {
     background-color: #e0dedf;
     border: 10px solid #e0dedf;
     width: 70%;
     height: 80vh;
     margin: 3em auto;
-    box-shadow: 10px 10px 20px 2px rgba(0,0,1,);
+    box-shadow: 10px 10px 20px 2px rgba(0,0,1,0.5);
+    /* border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    border-radius: 20px;
 }
 
 .circle {
@@ -32,7 +34,7 @@ body{
         width: 13.5em;
         margin: 0.5em auto;
 
-    }
+}
 
 #timer-display{
     font-family: sans-serif;
@@ -124,30 +126,28 @@ button{
 
 }
 
-    @media only screen and (max-width: 800px){
-        button{
-            border-radius: 50%;
-            justify-content: space-between;
-        }
-        #start, #stop {
-            padding: 1em 3em;
-        }
-
-        #reset, #lap {
-            padding: 1em 1em;
-        }
+@media only screen and (max-width: 800px){
+    button{
+        border-radius: 50%;
+        justify-content: space-between;
+    }
+    #start, #stop {
+        padding: 1em 3em;
     }
 
-    @media only screen and (max-width: 500px) {
-        #reset, #lap, #start {
-            padding: 1em 1em;
-            
-        }
-    }
-        #reset, #lap, #start, #stop {
-            padding: 1em 1em;
-
-        }
+    #reset, #lap {
+        padding: 1em 1em;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    #reset, #lap, #start {
+        padding: 1em 1em;            
+    }
+
+    #reset, #lap, #start, #stop {
+        padding: 1em 1em;
+    }
+}
+
 
