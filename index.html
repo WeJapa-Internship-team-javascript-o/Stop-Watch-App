@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stopwatch</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/3ee7e3ff50.js"></script>
 </head>
 <body>
      <div class="container">
@@ -28,7 +30,8 @@
                 </div>
 
                 <div id="button-2">
-                    <button id="start">Start</button>
+                    
+                    <button id="start">Start <i class="fa fas fa-play" aria-hidden="true"></i></button>
                 </div>
 
                 <div id="button-3">
@@ -37,7 +40,11 @@
 
             </div>
         </div>
-        
+        <div id="share-button">
+            Share
+            <i class="fas fa fa-share-square" aria-hidden="true"></i>
+            
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>
