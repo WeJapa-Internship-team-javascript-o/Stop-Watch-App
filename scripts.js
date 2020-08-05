@@ -84,8 +84,10 @@ stopButton.addEventListener('click', function pauseTimer() {
       paused = 1;
       running = 0;
       startButton.style.cursor = "pointer";
+      stopButton.innerHTML = 'Start';
     } else {
         // if the timer was already paused, when they click pause again, start the timer again
         startTimer();
+        stopButton.innerHTML = 'Stop';
     }
 });    
