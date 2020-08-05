@@ -124,9 +124,4 @@ button{
         }
     }
 
-    @media only screen and (max-width: 380px){
-
-        #reset, #lap, #start {
-            font-size: 0.8em;
-        }
-    }
+    
