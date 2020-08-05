@@ -1,3 +1,4 @@
+
 //get the start-button DOM
 const startButton = document.getElementById('start');
 
@@ -18,6 +19,13 @@ stopButton.innerHTML = 'Stop';
 //get button-2 DOM
 const button2 = document.getElementById('button-2');
 
+//get lap DOM
+const lap = document.getElementById('laplist');
+
+//event-listener for lap 
+lapButton.addEventListener('click', function() {
+    lap.style.visibility = 'visible';
+})
 
 //declared variables
 let startTime;
@@ -91,3 +99,4 @@ stopButton.addEventListener('click', function pauseTimer() {
         stopButton.innerHTML = 'Stop';
     }
 });    
+

@@ -11,6 +11,7 @@ html{
 body{
     background: rgb(78,173,143);
     background: linear-gradient(102deg, rgba(78,173,143,1) 0%, rgba(72,68,152,1) 89%, rgba(81,46,148,1) 100%);
+    width: 100%;
 }
 
 
@@ -40,10 +41,28 @@ body{
     font-weight: 400;
 }
 
+#lap-wrapper{
+    height: 30%;
+}
+
+
+#laplist{
+    visibility: hidden;
+    text-align: end;
+    padding: 0;
+   font-size: 1.5em;
+   border-bottom: 1px solid rgb(242, 248, 247);
+}
+
+ol li{
+padding: 5px;
+margin-left: 35px;
+}
+
 
 .button{
     position: relative;
-    top: 170px;
+    top: 70px;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -53,12 +72,12 @@ body{
 button{
     outline: none;
     border: 1px solid rgba(72,68,152,1);
-
     background-color: #e0dedf;
     border-radius: 10px 10px;
 }
 
 #start, #stop{
+
     color: #ffffff;
     border: 1px solid rgba(72,68,152,1);
     background-color: rgba(72,68,152,1);
@@ -75,8 +94,10 @@ button{
     color: rgba(72,68,152,1);
 }
 
-#start:hover{
+
+#start, #reset:hover, #lap:hover{
     background-color: rgba(81,46,148,1);
+    color: #ffffff;
 
 
 }
@@ -90,7 +111,9 @@ button{
         font-size: 2em;
     }
 
+
     #start, #stop {
+
         padding: 1em 5em;
     }
 
@@ -99,26 +122,32 @@ button{
         margin: 0 0.5em;
     }
 
+}
+
     @media only screen and (max-width: 800px){
         button{
             border-radius: 50%;
             justify-content: space-between;
         }
-
         #start, #stop {
             padding: 1em 3em;
         }
 
         #reset, #lap {
             padding: 1em 1em;
-
         }
     }
 
     @media only screen and (max-width: 500px) {
+        #reset, #lap, #start {
+            padding: 1em 1em;
+            
+        }
+    }
         #reset, #lap, #start, #stop {
             padding: 1em 1em;
 
         }
     }
 }
+
