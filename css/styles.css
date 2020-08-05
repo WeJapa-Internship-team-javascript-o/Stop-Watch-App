@@ -58,7 +58,7 @@ button{
     border-radius: 10px 10px;
 }
 
-#start{
+#start, #stop{
     color: #ffffff;
     border: 1px solid rgba(72,68,152,1);
     background-color: rgba(72,68,152,1);
@@ -90,7 +90,7 @@ button{
         font-size: 2em;
     }
 
-    #start {
+    #start, #stop {
         padding: 1em 5em;
     }
 
@@ -105,7 +105,7 @@ button{
             justify-content: space-between;
         }
 
-        #start {
+        #start, #stop {
             padding: 1em 3em;
         }
 
@@ -116,7 +116,7 @@ button{
     }
 
     @media only screen and (max-width: 500px) {
-        #reset, #lap, #start {
+        #reset, #lap, #start, #stop {
             padding: 1em 1em;
 
         }
