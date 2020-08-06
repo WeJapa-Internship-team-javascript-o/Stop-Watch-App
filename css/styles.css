@@ -42,7 +42,8 @@ body{
 }
 
 #lap-wrapper{
-    height: 30%;
+    height: 8em;
+    overflow-y: scroll;
 }
 
 
