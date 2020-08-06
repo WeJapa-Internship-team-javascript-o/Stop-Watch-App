@@ -128,13 +128,14 @@ function startTimer() {
     timerDisplay.style.cursor = "auto";      
     }
     resetButton.style.display = 'block';
-    lapButton.style.display = 'block';
+    resetButton.style.visibility = 'visible';
+    lapButton.style.visibility = 'visible';
     //startButton.innerHTML = 'Stop';   ..... removed this two since they have no effect on the code and a stop button was created
     //startButton.removeAttribute('id');     
     startButton.style.display = 'none';
     button2.appendChild(stopButton);
     stopButton.style.display = "block";  //added this
-    lapButton.disabled = false;
+    lapButton.style.display = "block";
 }
 
 
@@ -153,7 +154,7 @@ stopButton.addEventListener('click', function pauseTimer() {
       running = 0;
       //startButton.style.cursor = "pointer";..... removed this since it has no effect on the code
       stopButton.innerHTML = 'Continue'; // changed to Continue
-      lapButton.disabled = true;
+      //lapButton.disabled = true;
     } else {
         // if the timer was already paused, when they click pause again, start the timer again
         startTimer();
@@ -168,7 +169,7 @@ resetButton.addEventListener('click',function(){
     running = 0;
     paused = 0;
     timerDisplay.innerHTML = "00:00:00";
-    stopButton.innerHTML = 'Stop';
+    //stopButton.innerHTML = 'Stop';
     stopButton.style.display = "none";
     resetButton.style.display = "none";
     lapButton.style.display = "none";
