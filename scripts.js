@@ -21,6 +21,9 @@ const button2 = document.getElementById('button-2');
 //get lap DOM
 const lap = document.getElementById('laplist');
 
+//get share button
+const shareButton=document.querySelector("#share-button");
+
 //event-listener for lap 
 
 lapButton.addEventListener('click',lapTimer);
@@ -96,6 +99,7 @@ let hours;
 //Get to show time
 function getToShowTime() {
     updatedTime = new Date().getTime();
+
     if (savedTime) {
         difference = (updatedTime - startTime) + savedTime;
     } else {
@@ -105,12 +109,12 @@ function getToShowTime() {
     hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    let milliseconds = Math.floor((difference % (1000 * 60)) / 100);
+    let milliseconds = Math.floor((difference % (1000 * 60)) / 10);
     hours = (hours < 10) ? "0" + hours : hours;
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
     milliseconds = (milliseconds < 100) ? (milliseconds < 10) ? "00" + milliseconds : "0" + milliseconds : milliseconds;
-    timerDisplay.innerHTML = hours + ':' + minutes + ':' + seconds + ':' + milliseconds;
+    timerDisplay.innerHTML = `${hours}:${minutes}:${seconds}:${milliseconds}`;
 }
 
 
@@ -179,3 +183,34 @@ resetButton.addEventListener('click',function(){
 
 })
 
+///share button
+shareButton.addEventListener('click',function(){
+    var social= "twitter"
+    var url="https://wejapa-internship-team-javascript-o.github.io/Stop-Watch-App/"
+    var text="My Stopwatch link"
+    
+
+   
+
+    if(social == "facebook" || social == "twitter") 
+    { 
+        switch(social) {
+    
+            case "facebook":
+                var sharer = "https://www.facebook.com/sharer/sharer.php?u=" + url;
+                window.open(sharer, 'sharer', 'width=626,height=436');
+            break;
+    
+            case "twitter": 
+                var sharer = "http://twitter.com/share?text="+text+"&url="+url;
+                window.open(sharer, 'sharer', 'width=626,height=436');
+            break;
+            
+        }
+         } else {
+            console.log(social)
+        console.log("Share not found"); 
+        return false; 
+   
+    }
+})
