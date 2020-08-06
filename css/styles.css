@@ -1,9 +1,7 @@
-
 * {
     box-sizing: border-box;
 }
-
-
+  
 html {
     font-size: 16px;
 }
@@ -31,8 +29,8 @@ body {
         border-radius:50%;
         width: 13.5em;
         margin: 0.5em auto;
-
 }
+
 
 #timer-display{
     font-family: sans-serif;
@@ -92,7 +90,6 @@ button{
     color: rgba(72,68,152,1);
 }
 
-
 #start, #reset:hover, #lap:hover {
     background-color: rgba(81,46,148,1);
     color: #ffffff;
@@ -127,9 +124,7 @@ i {
         font-size: 2em;
     }
 
-
     #start, #stop {
-
         padding: 1em 5em;
     }
 
@@ -137,7 +132,6 @@ i {
         padding: 1em 3em;
         margin: 0 0.5em;
     }
-
 }
 
 @media only screen and (max-width: 800px){
@@ -163,5 +157,4 @@ i {
         padding: 1em 1em;
     }
 }
-
 

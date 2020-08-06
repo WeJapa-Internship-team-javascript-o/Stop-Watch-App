@@ -1,5 +1,3 @@
-
-
 //get the start-button DOM
 const startButton = document.getElementById('start');
 
@@ -180,3 +178,4 @@ resetButton.addEventListener('click',function(){
     }
 
 })
+
