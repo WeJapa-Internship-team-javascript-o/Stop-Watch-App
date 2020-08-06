@@ -24,13 +24,62 @@ const button2 = document.getElementById('button-2');
 const lap = document.getElementById('laplist');
 
 //event-listener for lap 
-lapButton.addEventListener('click', function() {
-    lap.style.display = 'block';
-    var lapValue = document.createElement('li');
-    lapValue.setAttribute('class', 'lp');
-    lapValue.innerHTML = timerDisplay.innerHTML;
-    lap.appendChild(lapValue);
-})
+
+lapButton.addEventListener('click',lapTimer);
+
+
+var lastLap={mins:0, secs:0, hrs:0};// to save the former lap time values
+function lapTimer() {
+// the seconds, minutes and hours variables are from getToShowTime function
+
+    
+    let lapSeconds;
+    if ((seconds < lastLap.secs) && (minutes>0)) {
+        minutes-=1;
+        seconds=parseInt(seconds) + 60;
+        lapSeconds=seconds - lastLap.secs;
+    }
+    else {
+        lapSeconds=seconds-lastLap.secs;
+    }
+
+    let lapMinutes;
+    if (minutes < lapMinutes) {
+        hours-=1;
+        minutes= parseInt(minutes) + 60;
+        lapMinutes= minutes - lastLap.mins;
+    }
+    else {
+        lapMinutes = minutes - lastLap.mins;
+    }
+
+    let lapHours=hours - lastLap.hrs;
+
+    if(lapSeconds < 10) {
+        lapSeconds= "0" + lapSeconds;
+    }
+    if (lapMinutes < 10) {
+        lapMinutes="0" + lapMinutes;
+    }
+
+    if (lapHours < 10) {
+        lapHours = "0" + lapHours;
+    }
+    lastLap = {
+        //saving the former value of minutes and seconds
+        mins:minutes,
+        secs:seconds,
+        hrs:hours
+    }
+    let lapWrapper=document.querySelector("#lap-wrapper");
+    let lapList=document.querySelector("#laplist")
+    let listItem=document.createElement("LI");
+    listItem.setAttribute("id", "lp");
+    let listContent=document.createTextNode(`${lapHours}:${lapMinutes}:${lapSeconds}`);
+    lapList.appendChild(listItem);
+    listItem.appendChild(listContent);
+    lapWrapper.appendChild(lapList);
+}
 
 //declared variables
 let startTime;
@@ -40,6 +89,9 @@ let tInterval;
 let savedTime;
 let paused = 0;
 let running = 0;
+let seconds;
+let minutes;
+let hours;
 
 
 
@@ -52,9 +104,9 @@ function getToShowTime() {
             difference =  updatedTime - startTime;
     }
         
-    let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    seconds = Math.floor((difference % (1000 * 60)) / 1000);
     //let milliseconds = Math.floor((difference % (1000 * 60)) / 100);
     hours = (hours < 10) ? "0" + hours : hours;
     minutes = (minutes < 10) ? "0" + minutes : minutes;
