@@ -96,6 +96,7 @@ let hours;
 //Get to show time
 function getToShowTime() {
     updatedTime = new Date().getTime();
+
     if (savedTime) {
         difference = (updatedTime - startTime) + savedTime;
     } else {
@@ -105,12 +106,12 @@ function getToShowTime() {
     hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    let milliseconds = Math.floor((difference % (1000 * 60)) / 100);
+    let milliseconds = Math.floor((difference % (1000 * 60)) / 10);
     hours = (hours < 10) ? "0" + hours : hours;
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
     milliseconds = (milliseconds < 100) ? (milliseconds < 10) ? "00" + milliseconds : "0" + milliseconds : milliseconds;
-    timerDisplay.innerHTML = hours + ':' + minutes + ':' + seconds + ':' + milliseconds;
+    timerDisplay.innerHTML = `${hours}:${minutes}:${seconds}:${milliseconds}`;
 }
 
 
