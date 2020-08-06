@@ -1,28 +1,25 @@
-
-*{
+* {
     box-sizing: border-box;
 }
-
-
-html{
+  
+html {
     font-size: 16px;
 }
 
-body{
+body {
     background: rgb(78,173,143);
     background: linear-gradient(102deg, rgba(78,173,143,1) 0%, rgba(72,68,152,1) 89%, rgba(81,46,148,1) 100%);
-    width: 100vw;
-
 }
 
 
-#card{
+#card {
     background-color: #e0dedf;
     border: 10px solid #e0dedf;
     width: 70%;
     height: 80vh;
     margin: 3em auto;
-    box-shadow: 10px 10px 20px 2px rgba(0,0,1,);
+    box-shadow: 10px 10px 20px 2px rgba(0,0,1,0.5);
+    border-radius: 20px;
 }
 
 .circle {
@@ -32,8 +29,8 @@ body{
         border-radius:50%;
         width: 13.5em;
         margin: 0.5em auto;
+}
 
-    }
 
 #timer-display{
     font-family: sans-serif;
@@ -42,25 +39,41 @@ body{
     font-weight: 400;
 }
 
+#lap-wrapper{
+    height: 30%;
+}
+
+
+#laplist{
+    text-align: end;
+    padding: 0;
+   font-size: 1.5em;
+   border-bottom: 1px solid rgb(242, 248, 247);
+}
+
+ol li{
+padding: 5px;
+margin-left: 35px;
+}
+
 
 .button{
     position: relative;
-    top: 170px;
+    top: 70px;
     width: 100%;
     display: flex;
     justify-content: space-around;
-
 }
 
 button{
     outline: none;
     border: 1px solid rgba(72,68,152,1);
-
     background-color: #e0dedf;
     border-radius: 10px 10px;
+    cursor: pointer;
 }
 
-#start{
+#start, #stop{
     color: #ffffff;
     border: 1px solid rgba(72,68,152,1);
     background-color: rgba(72,68,152,1);
@@ -77,10 +90,29 @@ button{
     color: rgba(72,68,152,1);
 }
 
-#start:hover{
+#start, #reset:hover, #lap:hover {
     background-color: rgba(81,46,148,1);
+    color: #ffffff;
 
 
+}
+
+i {
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+#share-button {
+    width: 15%;
+    margin: -20px auto;
+    text-align: center;
+    font-size: 3vw;
+    color: #e0dedf;
+    cursor: pointer;
+}
+
+#share-button > i {
+    color: #e0dedf;
 }
 
 @media only screen and (max-width: 1100px){
@@ -92,7 +124,7 @@ button{
         font-size: 2em;
     }
 
-    #start {
+    #start, #stop {
         padding: 1em 5em;
     }
 
@@ -100,26 +132,29 @@ button{
         padding: 1em 3em;
         margin: 0 0.5em;
     }
+}
 
-    @media only screen and (max-width: 800px){
-        button{
-            border-radius: 50%;
-            justify-content: space-between;
-        }
-
-        #start {
-            padding: 1em 3em;
-        }
-
-        #reset, #lap {
-            padding: 1em 1em;
-
-        }
+@media only screen and (max-width: 800px){
+    button{
+        border-radius: 50%;
+        justify-content: space-between;
+    }
+    #start, #stop {
+        padding: 1em 3em;
     }
 
-    @media only screen and (max-width: 500px) {
-        #reset, #lap, #start {
-            padding: 1em 1em;
-
-        }
+    #reset, #lap {
+        padding: 1em 1em;
     }
+}
+
+@media only screen and (max-width: 500px) {
+    #reset, #lap, #start {
+        padding: 1em 1em;            
+    }
+
+    #reset, #lap, #start, #stop {
+        padding: 1em 1em;
+    }
+}
+
