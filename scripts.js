@@ -130,7 +130,6 @@ function getToShowTime() {
     milliseconds= (milliseconds < 10) ? "0" + milliseconds : milliseconds;
 
     timerDisplay.innerHTML = `${hours}:${minutes}:${seconds}:${milliseconds}`;
-    adder;
 }
 
 
@@ -149,7 +148,7 @@ function startTimer() {
     resetButton.style.display = 'block';
     resetButton.style.visibility = 'visible';
     lapButton.style.visibility = 'visible';
-    //startButton.innerHTML = 'Stop';   ..... removed this two since they have no effect on the code and a stop button was created
+    startButton.innerHTML = 'Stop';   //..... removed this two since they have no effect on the code and a stop button was created
     //startButton.removeAttribute('id');     
     startButton.style.display = 'none';
     button2.appendChild(stopButton);
@@ -188,7 +187,7 @@ resetButton.addEventListener('click',function(){
     running = 0;
     paused = 0;
     timerDisplay.innerHTML = "00:00:00";
-    //stopButton.innerHTML = 'Stop';
+    startButton.innerHTML = 'Start';
     stopButton.style.display = "none";
     resetButton.style.display = "none";
     lapButton.style.display = "none";

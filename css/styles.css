@@ -11,11 +11,12 @@ body {
     background: linear-gradient(102deg, rgba(78,173,143,1) 0%, rgba(72,68,152,1) 89%, rgba(81,46,148,1) 100%);
 }
 
-h1{
-font-family: Serif;
-font- weight: bold;
-font -size: 2em;
-text-align: center;
+h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    color: #ffffff;
 } 
 
 #card {
@@ -23,7 +24,7 @@ text-align: center;
     border: 10px solid #e0dedf;
     width: 70%;
     height: 80vh;
-    margin: 3em auto;
+    margin: 1em auto;
     box-shadow: 10px 10px 20px 2px rgba(0,0,1,0.5);
     border-radius: 20px;
 }
@@ -58,7 +59,9 @@ text-align: center;
     text-align: end;
     padding: 0;
    font-size: 1.5em;
-   
+   /* margin-bottom: 20px; */
+   /* border: 1px solid black; */
+   /* height: 100%;   */
 }
 
 ol li{
@@ -68,7 +71,7 @@ border-bottom: 1px solid rgba(78,173,143,1);
 }
 
 
-.button{
+.button {
     position: relative;
     top: 70px;
     width: 100%;
@@ -88,7 +91,7 @@ button{
     color: #ffffff;
     border: 1px solid rgba(72,68,152,1);
     background-color: rgba(72,68,152,1);
-    padding: 1em 10em;
+    padding: 1em 15em;
     border-radius: 10px 10px;
 }
 
@@ -112,8 +115,8 @@ i {
 }
 
 #share-button {
-    width: 15%;
-    margin: -20px auto;
+    width: 100%;
+    margin: -3px auto;
     text-align: center;
     font-size: 3vw;
     color: #e0dedf;
@@ -123,13 +126,15 @@ i {
 #share-button > i {
     color: #e0dedf;
 }
+
 .fa {
-  padding: 20px;
+  /* padding: 20px; */
   font-size: 30px;
-  width: 30px;
+  /* width: 30px; */
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  /* border: 1px solid black; */
 }
 
 
@@ -150,6 +155,10 @@ i {
         padding: 1em 3em;
         margin: 0 0.5em;
     }
+
+    #lap-wrapper{
+        height: 15em;
+    }
 }
 
 @media only screen and (max-width: 800px){
@@ -164,6 +173,10 @@ i {
     #reset, #lap {
         padding: 1em 1em;
     }
+
+    #lap-wrapper{
+        height: 15em;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -173,6 +186,10 @@ i {
 
     #reset, #lap, #start, #stop {
         padding: 1em 1em;
+    }
+
+    #lap-wrapper{
+        height: 15em;
     }
 }
 
