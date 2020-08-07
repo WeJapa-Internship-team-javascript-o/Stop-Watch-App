@@ -16,7 +16,7 @@ h1 {
     font-weight: bold;
     font-size: 2em;
     text-align: center;
-    color: #ffffff;
+    color: #e0dedf;
 } 
 
 #card {
@@ -110,7 +110,7 @@ button{
 }
 
 i {
-    color: #ffffff;
+    color: #e0dedf;
     margin-left: 10px;
 }
 
