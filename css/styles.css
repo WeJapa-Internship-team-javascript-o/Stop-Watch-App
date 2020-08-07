@@ -11,6 +11,12 @@ body {
     background: linear-gradient(102deg, rgba(78,173,143,1) 0%, rgba(72,68,152,1) 89%, rgba(81,46,148,1) 100%);
 }
 
+h1{
+font-family: Serif;
+font- weight: bold;
+font -size: 2em;
+text-align: center;
+} 
 
 #card {
     background-color: #e0dedf;
