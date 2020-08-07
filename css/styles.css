@@ -113,6 +113,7 @@ button{
 i {
     color: #e0dedf;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 #share-button {
@@ -121,7 +122,6 @@ i {
     text-align: center;
     font-size: 3vw;
     color: #e0dedf;
-    cursor: pointer;
 }
 
 #share-button > i {

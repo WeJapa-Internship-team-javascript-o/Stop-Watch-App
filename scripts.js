@@ -25,8 +25,16 @@ const lap = document.getElementById('laplist');
 const shareButton=document.querySelector("#share-button");
 
 //event-listener for lap 
-
 lapButton.addEventListener('click',lapTimer);
+
+//get facebook icon
+const facebookIcon = document.querySelector(".fa-facebook");
+
+//get twitter icon
+const twitterIcon = document.querySelector(".fa-twitter");
+
+//get instagram icon
+// const instagramIcon = document.querySelector(".fa-instagram");
 
 
 var lastLap={mins:0, secs:0, hrs:0, mls:0};// to save the former lap time values
@@ -199,34 +207,28 @@ resetButton.addEventListener('click',function(){
 
 })
 
-///share button
-shareButton.addEventListener('click',function(){
-    var social= "twitter"
-    var url="https://wejapa-internship-team-javascript-o.github.io/Stop-Watch-App/"
-    var text="My Stopwatch link"
-    
+//twitter-icon share button event-listener
+twitterIcon.addEventListener('click', function(){
+    let url="https://wejapa-internship-team-javascript-o.github.io/Stop-Watch-App/"
+    let text="My Stopwatch link"
+    let sharer = "http://twitter.com/share?text="+text+"&url="+url;
+    window.open(sharer, 'sharer', 'width=626,height=436');
+});
 
-   
 
-    if(social == "facebook" || social == "twitter") 
-    { 
-        switch(social) {
-    
-            case "facebook":
-                var sharer = "https://www.facebook.com/sharer/sharer.php?u=" + url;
-                window.open(sharer, 'sharer', 'width=626,height=436');
-            break;
-    
-            case "twitter": 
-                var sharer = "http://twitter.com/share?text="+text+"&url="+url;
-                window.open(sharer, 'sharer', 'width=626,height=436');
-            break;
-            
-        }
-         } else {
-            console.log(social)
-        console.log("Share not found"); 
-        return false; 
-   
-    }
+//facebook-icon share button event-listener
+facebookIcon.addEventListener('click', function(){
+    let url="https://wejapa-internship-team-javascript-o.github.io/Stop-Watch-App/"
+    let sharer = "https://www.facebook.com/sharer/sharer.php?u=" + url;
+    window.open(sharer, 'sharer', 'width=626,height=436');
+
 })
+
+
+//instagram-icon share button event-listener
+// instagramIcon.addEventListener('click', function(){
+//     let url="https://wejapa-internship-team-javascript-o.github.io/Stop-Watch-App/"
+//     let text="My Stopwatch link"
+//     let sharer = "http://instagram.com/p?text="+text+"&url="+url;
+//     window.open(sharer, 'sharer', 'width=626,height=436');
+// })
