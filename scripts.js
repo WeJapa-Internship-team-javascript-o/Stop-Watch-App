@@ -29,16 +29,22 @@ const shareButton=document.querySelector("#share-button");
 lapButton.addEventListener('click',lapTimer);
 
 
-var lastLap={mins:0, secs:0, hrs:0};// to save the former lap time values
+var lastLap={mins:0, secs:0, hrs:0, mls:0};// to save the former lap time values
 function lapTimer() {
 // the seconds, minutes and hours variables are from getToShowTime function
-
+    let lapMilli;
+    if (milliseconds < lastLap.mls) {
+        seconds-=1;
+        lapMilli = milliseconds + 100 - lastLap.mls;
+    }
+    else {
+        lapMilli = milliseconds - lastLap.mls;
+    }
     
     let lapSeconds;
     if ((seconds < lastLap.secs) && (minutes>0)) {
         minutes-=1;
-        seconds=parseInt(seconds) + 60;
-        lapSeconds=seconds - lastLap.secs;
+        lapSeconds= parseInt(seconds) - lastLap.secs + 60;
     }
     else {
         lapSeconds=seconds-lastLap.secs;
@@ -70,13 +76,14 @@ function lapTimer() {
         //saving the former value of minutes and seconds
         mins:minutes,
         secs:seconds,
-        hrs:hours
+        hrs:hours,
+        mls:milliseconds
     }
     let lapWrapper=document.querySelector("#lap-wrapper");
     let lapList=document.querySelector("#laplist")
     let listItem=document.createElement("LI");
     listItem.setAttribute("id", "lp");
-    let listContent=document.createTextNode(`${lapHours}:${lapMinutes}:${lapSeconds}`);
+    let listContent=document.createTextNode(`${lapHours}:${lapMinutes}:${lapSeconds}:${lapMilli}`);
     lapList.appendChild(listItem);
     listItem.appendChild(listContent);
     lapWrapper.appendChild(lapList);
@@ -93,6 +100,7 @@ let running = 0;
 let seconds;
 let minutes;
 let hours;
+let milliseconds = 0;
 
 
 
@@ -109,13 +117,22 @@ function getToShowTime() {
     hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    let milliseconds = Math.floor((difference % (1000 * 60)) / 10);
+    
+
+    milliseconds++;
+    if (milliseconds===100) {
+        milliseconds = 1;
+    }
+
     hours = (hours < 10) ? "0" + hours : hours;
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
-    milliseconds = (milliseconds < 100) ? (milliseconds < 10) ? "00" + milliseconds : "0" + milliseconds : milliseconds;
+    milliseconds= (milliseconds < 10) ? "0" + milliseconds : milliseconds;
+
     timerDisplay.innerHTML = `${hours}:${minutes}:${seconds}:${milliseconds}`;
+    adder;
 }
+
 
 
 //startTimer function
@@ -124,7 +141,7 @@ function startTimer() {
         startTime = new Date().getTime();
         tInterval = setInterval(getToShowTime, 1);
       // change 1 to 1000 above to run script every second instead of every millisecond. one other change will be needed in the getShowTime() function below for this to work. see comment there.   
-       
+        
     paused = 0;
     running = 1;
     timerDisplay.style.cursor = "auto";      
