@@ -34,12 +34,21 @@ iii). 	When user stops the timer the Continue and Share buttons pops up and up t
 
 # Contributors
 [Riliwan Hassan](https://github.com/worldsalt3)
+
 [Babalola Lateef](https://github.com/delat22)
+
 [Daodu Muyiwa](https://github.com/david660)  
+
 [Odiyo Favour](https://github.com/eneze29)
+
 [Foluke Odusanya](https://github.com/Folukie)
+
 [Ogbuagu Francis](https://github.com/franciscoder)
+
 [Adewumi Adewale](https://github.com/iamwhalle)
+
 [Ameh Clinton Romey](https://github.com/amehClinton)
+
 [Anash Uddin](https://github.com/anashzzz)
+
 [Adetutu Gbangbola](https://github.com/Adetutu777)
