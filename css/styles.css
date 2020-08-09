@@ -60,10 +60,9 @@ h1 {
 #laplist{
     text-align: end;
     padding: 0;
-   font-size: 1.5em;
-   /* margin-bottom: 20px; */
-   /* border: 1px solid black; */
-   /* height: 100%;   */
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 ol li{
