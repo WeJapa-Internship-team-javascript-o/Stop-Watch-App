@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 * {
     box-sizing: border-box;
 }
@@ -7,13 +9,13 @@ html {
 }
 
 body {
+    font-family: 'roboto', sans-serif;
     background: rgb(78,173,143);
     background: linear-gradient(102deg, rgba(78,173,143,1) 0%, rgba(72,68,152,1) 89%, rgba(81,46,148,1) 100%);
 }
 
 h1 {
     margin-top: 10px;
-    font-family: sans-serif;
     font-weight: bold;
     font-size: 2em;
     text-align: center;
@@ -42,7 +44,6 @@ h1 {
 
 
 #timer-display{
-    font-family: sans-serif;
     font-size: 2.1em;
     margin: 40% auto;
     font-weight: 400;
@@ -78,6 +79,7 @@ border-bottom: 1px solid rgba(78,173,143,1);
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 5px
 }
 
 button{
