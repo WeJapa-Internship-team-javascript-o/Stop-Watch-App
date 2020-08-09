@@ -32,6 +32,15 @@ ii). 	When user uses the Lap button, the elapsed time to that point should be re
 
 iii). 	When user stops the timer the Continue and Share buttons pops up and up the space of Stop and Lap respectively while the Reset button still maintains its position and performs its function (i.e resets the timer to the start)
 
+# Issues Faced 
+1.  DOM manipulation 
+2.  Collaborating with and operating git hub. 
+3.  Adjusting the milliseconds counter
+
+
+#  Feedback 
+The assignment was a workable one that helped us implement what we have learnt so far.... 
+
 # Contributors
 [Riliwan Hassan](https://github.com/worldsalt3)
 
@@ -52,3 +61,4 @@ iii). 	When user stops the timer the Continue and Share buttons pops up and up t
 [Anash Uddin](https://github.com/anashzzz)
 
 [Adetutu Gbangbola](https://github.com/Adetutu777)
+
